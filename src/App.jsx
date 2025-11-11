@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import axios from "axios";
 
 function App() {
   const [topics, setTopics] = useState([]);
@@ -12,7 +13,7 @@ function App() {
 
   // Load topics and quizzes
   useEffect(() => {
-  fetch('/api/topics')
+  axios('/api/topics')
     .then(res => res.json())
     .then(data => {
       console.log('Fetched topics:', data);
@@ -20,7 +21,7 @@ function App() {
     })
     .catch(err => console.error('Topics fetch error:', err));
 
-  fetch('/api/quizzes')
+  axios('/api/quizzes')
     .then(res => res.json())
     .then(data => {
       console.log('Fetched quizzes:', data);
@@ -29,7 +30,7 @@ function App() {
     .catch(err => console.error('Quizzes fetch error:', err));
 
   
-  fetch('/sampleQuizFile.json')
+  axios('/sampleQuizFile.json')
     .then(res => res.json())
     .then(data => {
       console.log('Loaded local quiz:', data);
@@ -63,7 +64,7 @@ function App() {
   // Load questions when quiz is selected
   useEffect(() => {
     if (selectedQuiz) {
-      fetch(`/api/questions/${selectedQuiz}`)
+      axios(`/api/questions/${selectedQuiz}`)
         .then(res => res.json())
         .then(data => {
           setQuestions(data);
