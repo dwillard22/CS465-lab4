@@ -1,15 +1,5 @@
-# Lab 3
+# Lab 4
 
-This is the starter template for Lab3 CS465 Fall 2025.
-
-This repository will be cloned into a new repo just for you! You can then clone that 
-repository down to your development laptop and get started. I will also have access to your
-repository for grading purposes.
-
-As you work on the lab, you should regularly `git push` back to the classroom repository on GitHub.
-When you are finished, be sure to add/commit/push !
-
-Note: I will _only_ grade what's in the `main` branch of your personal repo created by GitHub
-Classroom.
-
-ccp
+To run this project you will have to cd into the server folder to run the server then you will start a new terminal and cd into the
+frontend folder then run npm run dev and it should start. You will get a topics of Math, Football, or General EU Knowledge. It is the
+same quiz structure as lab 3 but with a live server instead.
